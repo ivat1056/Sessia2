@@ -13,7 +13,7 @@ namespace Sessia2
         {
             try
             {
-                Regex regex = new Regex("^[ABEKMHOPCTYX]{1}[0-9]{3}[ABEKMHOPCTYX]{2}[0-9]{3}"); // регулярное выражение
+                Regex regex = new Regex("^[ABEKMHOPCTYX]{1}[0-9]{3}[ABEKMHOPCTYX]{2}[0-9]{3}"); 
                 bool a = regex.IsMatch(mark);
                 if (!a)
                 {
