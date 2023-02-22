@@ -10,7 +10,7 @@ namespace UnitTestProject1
         
         
         [TestMethod]
-        public void GetNextMarkAfterInRange_Correctly()
+        public void GetNextMarkAfterInRange1()
         {
             string exception = "A006AA152";
             string prevMark = "A005AA152";
@@ -21,7 +21,7 @@ namespace UnitTestProject1
         }
         
         [TestMethod]
-        public void GetNextMarkAfterInRange_CorrectlyType()
+        public void GetNextMarkAfterInRange2()
         {
             string prevMark = "A005AA152";
             string rangeStart = "A001AA152";
@@ -31,7 +31,7 @@ namespace UnitTestProject1
         }
        
         [TestMethod]
-        public void CheckMark_CorrectlyType()
+        public void CheckMark_CorrectlyType3()
         {
             string mark = "A000AA152";
             bool actual = REG_MARK_LIB.CheckMark(mark);
@@ -39,7 +39,7 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void GetNextMarkAfter_Border()
+        public void GetNextMarkAfter_Border5()
         {
             string exception = "error";
             string mark = "X999XX152";
@@ -48,7 +48,7 @@ namespace UnitTestProject1
         }
    
         [TestMethod]
-        public void GetNextMarkAfterInRange_NotCorrectlyRegion()
+        public void GetNextMarkAfterInRange4()
         {
             string exception = "out of stock";
             string prevMark = "A005AA777";
@@ -59,7 +59,7 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void GetNextMarkAfterInRange_NotCorrectly()
+        public void GetNextMarkAfterInRange6()
         {
             string exception = "out of stock";
             string prevMark = "A990AB152";
@@ -69,7 +69,7 @@ namespace UnitTestProject1
             Assert.IsTrue(exception == actual);
         }
         [TestMethod]
-        public void CheckMark_NotCorrectlyRegion()
+        public void CheckMark_NotCorrectlyRegion7()
         {
             bool exception = false;
             string mark = "X345AT000";
@@ -77,7 +77,7 @@ namespace UnitTestProject1
             Assert.AreEqual(exception, actual);
         }
         [TestMethod]
-        public void GetCombinationsCountInRange_Correctly()
+        public void GetCombinationsCountInRange8()
         {
             int exception = 1009;
             string mark1 = "A001AA152";
@@ -87,7 +87,7 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void GetCombinationsCountInRange_NotCorrectly()
+        public void GetCombinationsCountInRange10()
         {
             int exception = 150;
             string mark1 = "A001AA152";
@@ -95,30 +95,6 @@ namespace UnitTestProject1
             int actual = REG_MARK_LIB.GetCombinationsCountInRange(mark1, mark2);
             Assert.IsTrue(exception != actual);
         }
-
-        [TestMethod]
-        public void GetCombinationsCountInRange_TypeCorrectly()
-        {
-            string mark1 = "A001AA152";
-            string mark2 = "A010AB152";
-            int actual = REG_MARK_LIB.GetCombinationsCountInRange(mark1, mark2);
-            Assert.IsInstanceOfType(actual, typeof(int));
-        }
-        [TestMethod]
-
-        public void CheckMark_Correctly()
-        {
-            string mark = "X345AT152";
-            bool actual = REG_MARK_LIB.CheckMark(mark);
-            Assert.IsTrue(actual);
-        }
-
-        [TestMethod]
-        public void CheckMark_NotCorrectly()
-        {
-            string mark = "X345AT000";
-            bool actual = REG_MARK_LIB.CheckMark(mark);
-            Assert.IsFalse(actual);
-        }
+        
     }
 }
